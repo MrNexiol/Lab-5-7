@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Lab 5–7</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="menu_drawer">Drawer</string>
+    <string name="dlugosc">Długość:&#160;</string>
+    <string name="szerokosc">Szerokość:&#160;</string>
+    <string name="kurs">Kurs:&#160;</string>
+    <string name="predkosc">Prędkość:&#160;</string>
+    <string name="wysokosc">Wysokość:&#160;</string>
+    <string name="satelity">Ilość widocznych satelit:&#160;</string>
+    <string name="hdop">HDOP:&#160;</string>
+    <string name="vdop">VDOP:&#160;</string>
+    <string name="distance">Distance:&#160;</string>
+    <string name="measure_distance">Measure distance</string>
+</resources>

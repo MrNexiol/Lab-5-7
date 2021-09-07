@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MapsActivity" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/distance_value"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/distance"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/measure_distance"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/distance_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/measure_distance"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/distance" />
+
+        <Button
+            android:id="@+id/measure_distance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/measure_distance"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/szerokosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/szerokosc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/szerokosc_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/szerokosc"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/dlugosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dlugosc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/szerokosc" />
+
+        <TextView
+            android:id="@+id/dlugosc_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/dlugosc"
+            app:layout_constraintTop_toBottomOf="@+id/szerokosc_value" />
+
+        <TextView
+            android:id="@+id/kurs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/kurs"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/dlugosc" />
+
+        <TextView
+            android:id="@+id/kurs_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/kurs"
+            app:layout_constraintStart_toEndOf="@+id/kurs" />
+
+        <TextView
+            android:id="@+id/predkosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/predkosc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/kurs" />
+
+        <TextView
+            android:id="@+id/predkosc_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/wysokosc"
+            app:layout_constraintStart_toEndOf="@+id/predkosc" />
+
+        <TextView
+            android:id="@+id/wysokosc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wysokosc"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/predkosc" />
+
+        <TextView
+            android:id="@+id/wysokosc_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/wysokosc"
+            app:layout_constraintStart_toEndOf="@+id/wysokosc" />
+
+        <TextView
+            android:id="@+id/satelity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/satelity"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/wysokosc" />
+
+        <TextView
+            android:id="@+id/satelity_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/satelity"
+            app:layout_constraintStart_toEndOf="@+id/satelity" />
+
+        <TextView
+            android:id="@+id/hdop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hdop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/satelity" />
+
+        <TextView
+            android:id="@+id/hdop_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/vdop"
+            app:layout_constraintStart_toEndOf="@+id/hdop" />
+
+        <TextView
+            android:id="@+id/vdop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vdop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/hdop" />
+
+        <TextView
+            android:id="@+id/vdop_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/vdop"
+            app:layout_constraintStart_toEndOf="@+id/vdop" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.drawerlayout.widget.DrawerLayout>
